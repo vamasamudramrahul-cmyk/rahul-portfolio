@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+  // Set the theme before first paint to avoid a flash of the wrong theme.
+  // Mirrors the same key/logic script.js uses for the toggle, kept in sync.
+  (function () {
+    try {
+      var stored = localStorage.getItem("rahul-portfolio-theme");
+      if (stored !== "light") document.documentElement.setAttribute("data-theme", "dark");
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  })();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bikergram Website — Case Study | Vamasamudram Rahul</title>
+<meta name="description" content="Case study: Bikergram Website, a planned digital platform for motorcycle-community and rider-focused information, researched and planned by Vamasamudram Rahul.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<a class="site-brand" href="../index.html#home"><img src="../assets/images/portfolio.png" alt="Rahul — portfolio logo" class="site-brand-logo"></a>
+<button class="menu-toggle" id="menu-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-panel" aria-label="Open menu">
+  <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+<div class="menu-panel" id="menu-panel" aria-hidden="true">
+  <button class="menu-close" id="menu-close" type="button" aria-label="Close menu">
+    <span class="menu-icon is-close" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+  <div class="menu-panel-inner">
+    <div class="menu-top">
+      <span>RAHUL - Professional Portfolio</span>
+      <div class="menu-utility">
+        <button class="theme-toggle" data-theme-toggle type="button" aria-pressed="false">Dark</button>
+        <a href="../assets/resume/Vamasamudram-Rahul-Resume.pdf" target="_blank" rel="noopener noreferrer">
+  Resume
+</a>
+      </div>
+    </div>
+    <nav class="menu-nav" aria-label="Primary">
+      <a href="../index.html#home">home.</a>
+      <a href="../index.html#about">about.</a>
+      <a href="../index.html#experience">experience.</a>
+      <a href="../index.html#projects">projects.</a>
+      <a href="../index.html#skills">skills.</a>
+      <a href="../index.html#learning">learning.</a>
+      <a href="../index.html#contact">contact.</a>
+    </nav>
+    <div class="menu-bottom">
+      <div class="menu-social">
+        <a href="mailto:vamasamudramrahul@gmail.com" aria-label="Email Rahul">
+          <img src="../assets/images/email.png" alt="" class="social-icon-img">
+        </a>
+        <a href="https://www.linkedin.com/in/rahul-vamasamudram-27652a417/" target="_blank" rel="noopener noreferrer" aria-label="Open Rahul's LinkedIn profile">
+          <img src="../assets/images/linkedin.png" alt="" class="social-icon-img">
+        </a>
+        <a href="https://github.com/vamasamudramrahul-cmyk" target="_blank" rel="noopener noreferrer" aria-label="Open Rahul's GitHub profile">
+          <img src="../assets/images/github.png" alt="" class="social-icon-img">
+        </a>
+        <a href="https://wa.me/919121840380" target="_blank" rel="noopener noreferrer" aria-label="Message Rahul on WhatsApp">
+          <img src="../assets/images/whatsapp.png" alt="" class="social-icon-img">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<main id="main">
+
+  <section class="case-header">
+    <div class="container">
+      <a class="back-link" href="../index.html#projects">← Back to Projects</a>
+      <h1 class="case-title">Bikergram Website</h1>
+     <span>Research/ Development Path</span>
+      <div class="case-meta">
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>Overview</h2>
+      <p>Bikergram Website is a planned digital platform for organizing motorcycle-community and rider-focused information currently scattered across social media, maps, travel platforms, and local sources. It's designed around structured discovery of biker clubs, destinations, events, travel circuits and rider resources, with evidence-oriented research and data-quality practices for Andhra Pradesh and Telangana.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>The Problem</h2>
+      <p>Information that matters to bikers — clubs, destinations, events, travel circuits, local resources — exists, but it's spread thin across social media posts, map pins, travel sites, and word of mouth, with no shared source of truth. Bringing it together in one structured, verifiable place is the starting point for this project.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>The Approach</h2>
+      <p>The approach centers on structured discovery and evidence-oriented research: verifying information before it's treated as reliable, organizing it with a consistent data model, and building an information architecture that holds up as the dataset of clubs, places, events, and circuits grows.</p>
+      <div class="flow-diagram" style="margin-top: var(--space-5);">
+        <span class="step">Community research</span>
+        <span class="step">Product planning</span>
+        <span class="step">Data organization</span>
+        <span class="step">Verification methodology</span>
+        <span class="step">Information architecture</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>My Role</h2>
+      <p>I'm researching and planning this platform myself — defining its information architecture, verification methodology, and data model, drawing on my experience running Bikergram's community. It's currently in the research and planning phase; development follows once that groundwork is in place.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>Core Features</h2>
+      <p>Bikers Hub is the discovery concept planned at the core of the website.</p>
+      <div class="two-col">
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-2);">Club Discovery</h3>
+          <p>Find Clubs → State → District → Details. Browse biker clubs narrowed down by state and district.</p>
+        </div>
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-2);">Places Discovery</h3>
+          <p>Find Places → State → District → Details. Browse touring destinations narrowed down the same way.</p>
+        </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>Challenges</h2>
+      <ul>
+        <li>Verifying scattered, informally-shared information before treating it as reliable</li>
+        <li>Designing a data-quality and verification methodology that can hold up as the dataset grows</li>
+        <li>Turning community knowledge into structured, well-organized data</li>
+        <li>Planning an information architecture for clubs, places, events, and circuits that stays easy to navigate</li>
+        <li>Staying honest about what's research versus what's actually built</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-section" style="border-bottom: none;">
+    <div class="container">
+      <h2>What This Project Demonstrates</h2>
+      <ul>
+        <li>Research methodology and evidence-oriented thinking</li>
+        <li>Product planning, grounded in a real community's needs</li>
+        <li>Information architecture and data organization</li>
+        <li>Translating informal community knowledge into a structured product</li>
+        <li>Working carefully in the research/planning phase before building further</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="next-project">
+    <div class="container">
+      <p>Next project</p>
+      <a href="urban-tray.html">Urban Tray →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 Rahul Vamasamudram. All rights reserved.</p>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

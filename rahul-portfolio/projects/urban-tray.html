@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+  // Set the theme before first paint to avoid a flash of the wrong theme.
+  // Mirrors the same key/logic script.js uses for the toggle, kept in sync.
+  (function () {
+    try {
+      var stored = localStorage.getItem("rahul-portfolio-theme");
+      if (stored !== "light") document.documentElement.setAttribute("data-theme", "dark");
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  })();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urban Tray — Case Study | Vamasamudram Rahul</title>
+<meta name="description" content="Case study: Urban Tray, a food-delivery platform prototype built by Vamasamudram Rahul.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<a class="site-brand" href="../index.html#home"><img src="../assets/images/portfolio.png" alt="Rahul — portfolio logo" class="site-brand-logo"></a>
+<button class="menu-toggle" id="menu-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-panel" aria-label="Open menu">
+  <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+<div class="menu-panel" id="menu-panel" aria-hidden="true">
+  <button class="menu-close" id="menu-close" type="button" aria-label="Close menu">
+    <span class="menu-icon is-close" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+  <div class="menu-panel-inner">
+    <div class="menu-top">
+      <span>RAHUL - Professional Portfolio</span>
+      <div class="menu-utility">
+        <button class="theme-toggle" data-theme-toggle type="button" aria-pressed="false">Dark</button>
+        <a href="../assets/resume/Vamasamudram-Rahul-Resume.pdf" target="_blank" rel="noopener noreferrer">
+  Resume
+</a>
+      </div>
+    </div>
+    <nav class="menu-nav" aria-label="Primary">
+      <a href="../index.html#home">home.</a>
+      <a href="../index.html#about">about.</a>
+      <a href="../index.html#experience">experience.</a>
+      <a href="../index.html#projects">projects.</a>
+      <a href="../index.html#skills">skills.</a>
+      <a href="../index.html#learning">learning.</a>
+      <a href="../index.html#contact">contact.</a>
+    </nav>
+    <div class="menu-bottom">
+      <div class="menu-social">
+        <a href="mailto:vamasamudramrahul@gmail.com" aria-label="Email Rahul">
+          <img src="../assets/images/email.png" alt="" class="social-icon-img">
+        </a>
+        <a href="https://www.linkedin.com/in/rahul-vamasamudram-27652a417/" target="_blank" rel="noopener noreferrer" aria-label="Open Rahul's LinkedIn profile">
+          <img src="../assets/images/linkedin.png" alt="" class="social-icon-img">
+        </a>
+        <a href="https://github.com/vamasamudramrahul-cmyk" target="_blank" rel="noopener noreferrer" aria-label="Open Rahul's GitHub profile">
+          <img src="../assets/images/github.png" alt="" class="social-icon-img">
+        </a>
+        <a href="https://wa.me/919121840380" target="_blank" rel="noopener noreferrer" aria-label="Message Rahul on WhatsApp">
+          <img src="../assets/images/whatsapp.png" alt="" class="social-icon-img">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<main id="main">
+
+  <section class="case-header">
+    <div class="container">
+      <a class="back-link" href="../index.html#projects">← Back to Projects</a>
+      <h1 class="case-title">Urban Tray</h1>
+      <div class="case-meta">
+        <span>In Development / Prototype</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>Overview</h2>
+      <p>Urban Tray is a food-ordering and delivery application that evolved from an FOE project into an independent software-development project. It focuses on the customer ordering experience while exploring the architecture required for a broader multi-role food-delivery system.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>The Problem</h2>
+      <p>Coordinating food ordering between customers, restaurants, and delivery partners often means juggling phone orders, manual tracking, and disconnected tools.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>The Approach</h2>
+      <p>Urban Tray began within the Fundamentals of Excellence (FOE) program, then grew beyond that context into independent development. The concept is a single platform that brings ordering, menu browsing, and delivery coordination together for everyone involved — built around three roles, supported by an admin layer:</p>
+      <div class="flow-diagram" style="margin-top: var(--space-4);">
+        <span class="step">Urban Tray</span><span class="sep">↕</span>
+        <span class="step">Customer</span><span class="sep">↕</span>
+        <span class="step">Restaurant / Vendor</span><span class="sep">↕</span>
+        <span class="step">Delivery Partner</span>
+      </div>
+      <p style="margin-top: var(--space-4);">The customer-facing side is the most developed part of the concept so far; the restaurant, vendor, and delivery-partner sides are still being designed.</p>
+      <div class="flow-diagram" style="margin-top: var(--space-5);">
+        <span class="step">FOE Assignment</span><span class="sep">→</span>
+        <span class="step">Food Delivery Concept</span><span class="sep">→</span>
+        <span class="step">Branding / Logo</span><span class="sep">→</span>
+        <span class="step">Idea Expanded</span><span class="sep">→</span>
+        <span class="step">Functional Prototype</span><span class="sep">→</span>
+        <span class="step">Independent Development</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>My Role</h2>
+      <p>I built Urban Tray's customer-facing prototype independently after it began as an FOE assignment — designing the data model and implementing the ordering flow end to end in Flask. I'm now exploring how the architecture extends to the restaurant, vendor, and delivery-partner roles.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>Core Features</h2>
+      <ul>
+        <li>Customer registration and login</li>
+        <li>Menu and food browsing, with categories and food details</li>
+        <li>Cart and checkout with coupon support</li>
+        <li>Order placement, order-success flow, order history, and order tracking</li>
+        <li>Reviews</li>
+        <li>Basic admin interface for managing customer, menu, and order data</li>
+      </ul>
+      <p style="margin-top: var(--space-5); color: var(--text-secondary); font-size: 0.9rem;">Built with Python, Flask, HTML, CSS, and JavaScript, with JSON-based data storage, tracked in Git/GitHub.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>Challenges</h2>
+      <ul>
+        <li>Designing for multiple user roles (customer, restaurant, delivery partner)</li>
+        <li>Managing the order lifecycle end to end</li>
+        <li>Modeling relationships between customer, menu, and order data</li>
+        <li>Managing a growing project scope</li>
+        <li>Moving from concept to a working prototype iteratively</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-section" style="border-bottom: none;">
+    <div class="container">
+      <h2>What This Project Demonstrates</h2>
+      <ul>
+        <li>Product thinking</li>
+        <li>Web and backend development</li>
+        <li>UX flow design</li>
+        <li>Data management</li>
+        <li>Scope management</li>
+        <li>Iterative development</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="next-project">
+    <div class="container">
+      <p>Next project</p>
+      <a href="meeseva-dashboard.html">MeeSeva Dashboard →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 Rahul Vamasamudram. All rights reserved.</p>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+  // Set the theme before first paint to avoid a flash of the wrong theme.
+  // Mirrors the same key/logic script.js uses for the toggle, kept in sync.
+  (function () {
+    try {
+      var stored = localStorage.getItem("rahul-portfolio-theme");
+      if (stored !== "light") document.documentElement.setAttribute("data-theme", "dark");
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+  })();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MeeSeva Dashboard — Case Study | Vamasamudram Rahul</title>
+<meta name="description" content="Case study: MeeSeva Dashboard, an owner-side management dashboard concept for a single MeeSeva center, designed by Vamasamudram Rahul.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<a class="site-brand" href="../index.html#home"><img src="../assets/images/portfolio.png" alt="Rahul — portfolio logo" class="site-brand-logo"></a>
+<button class="menu-toggle" id="menu-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="menu-panel" aria-label="Open menu">
+  <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+</button>
+
+<div class="menu-panel" id="menu-panel" aria-hidden="true">
+  <button class="menu-close" id="menu-close" type="button" aria-label="Close menu">
+    <span class="menu-icon is-close" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+  <div class="menu-panel-inner">
+    <div class="menu-top">
+      <span>RAHUL - Professional Portfolio</span>
+      <div class="menu-utility">
+        <button class="theme-toggle" data-theme-toggle type="button" aria-pressed="false">Dark</button>
+        <a href="../assets/resume/Vamasamudram-Rahul-Resume.pdf" target="_blank" rel="noopener noreferrer">
+  Resume
+</a>
+      </div>
+    </div>
+<nav class="menu-nav" aria-label="Primary">
+      <a href="../index.html#home">home.</a>
+      <a href="../index.html#about">about.</a>
+      <a href="../index.html#experience">experience.</a>
+      <a href="../index.html#projects">projects.</a>
+      <a href="../index.html#skills">skills.</a>
+      <a href="../index.html#learning">learning.</a>
+      <a href="../index.html#contact">contact.</a>
+    </nav>
+    <div class="menu-bottom">
+      <div class="menu-social">
+        <a href="mailto:vamasamudramrahul@gmail.com" aria-label="Email Rahul">
+          <img src="../assets/images/email.png" alt="" class="social-icon-img">
+        </a>
+        <a href="https://www.linkedin.com/in/rahul-vamasamudram-27652a417/" target="_blank" rel="noopener noreferrer" aria-label="Open Rahul's LinkedIn profile">
+          <img src="../assets/images/linkedin.png" alt="" class="social-icon-img">
+        </a>
+        <a href="https://github.com/vamasamudramrahul-cmyk" target="_blank" rel="noopener noreferrer" aria-label="Open Rahul's GitHub profile">
+          <img src="../assets/images/github.png" alt="" class="social-icon-img">
+        </a>
+        <a href="https://wa.me/919121840380" target="_blank" rel="noopener noreferrer" aria-label="Message Rahul on WhatsApp">
+          <img src="../assets/images/whatsapp.png" alt="" class="social-icon-img">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+  <section class="case-header">
+    <div class="container">
+      <a class="back-link" href="../index.html#projects">← Back to Projects</a>
+      <h1 class="case-title">MeeSeva Dashboard</h1>
+      <div class="case-meta">
+        <span>Internal system for a local MeeSeva center</span>
+        <span>In Development</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>Overview</h2>
+      <p>MeeSeva Dashboard is an internal service-center management system designed around the day-to-day workflow of a local MeeSeva center — customer management, service information, applications, queue and token operations, staff permissions, collections and reporting. It's designed from operational requirements upward, with attention to application/token state separation, financial privacy, and scope control.</p>
+      <p>It is an internal tool for the center owner and staff. It is not an official government MeeSeva replacement and does not integrate with government systems.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>The Problem</h2>
+      <p>Running a service center involves many small operational tasks that are easy to lose track of without a system:</p>
+      <ul>
+        <li>Managing customer information</li>
+        <li>Tracking applications</li>
+        <li>Handling the queue</li>
+        <li>Managing service information</li>
+        <li>Tracking collections internally</li>
+        <li>Organizing daily operations</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>The Approach</h2>
+      <p>The system is structured around the center's actual areas of work:</p>
+      <div class="flow-diagram" style="margin-top: var(--space-4);">
+        <span class="step">Customer Management</span>
+        <span class="step">Service Management</span>
+        <span class="step">Applications</span>
+        <span class="step">Queue / Tokens</span>
+        <span class="step">Collections</span>
+        <span class="step">Staff / Permissions</span>
+        <span class="step">Reports</span>
+        <span class="step">Settings</span>
+      </div>
+      <p style="margin-top: var(--space-5);">In daily use, that structure plays out as:</p>
+      <div class="flow-diagram" style="margin-top: var(--space-4);">
+        <span class="step">Customer search / create</span><span class="sep">→</span>
+        <span class="step">Select service</span><span class="sep">→</span>
+        <span class="step">Create application</span><span class="sep">→</span>
+        <span class="step">Generate token</span><span class="sep">→</span>
+        <span class="step">Process through queue</span><span class="sep">→</span>
+        <span class="step">Update application status</span><span class="sep">→</span>
+        <span class="step">Complete / submit</span><span class="sep">→</span>
+        <span class="step">Track internal collection</span>
+      </div>
+      <p style="margin-top: var(--space-4);">Every step is performed by the owner or staff. This is not an online customer self-service portal. Built with attention to requirements, workflow design, full-stack development, database, and authentication.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>My Role</h2>
+      <p>I planned and designed the dashboard around how the center actually works, defining its workflow, data, and access rules, and I am building it. It has not been deployed or adopted in real-world use.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>Core Features</h2>
+      <div class="two-col">
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-2);">Customer Management</h3>
+          <p>Search, create, and manage customers using a customer ID, name, and mobile number, with optional alternate mobile and personal or address details.</p>
+        </div>
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-2);">Service Management</h3>
+          <p>Owner-maintained service information: name, department, category, application type, description, eligibility, required documents, process steps, expected processing time, status, and notes. The owner enters this information; nothing is retrieved automatically from government sources.</p>
+        </div>
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-2);">Applications</h3>
+          <p>Applications connect a customer to a service. Several services in one visit are handled as separate applications under the same visit. Statuses: Received, In Progress, Waiting for Documents, Submitted, Completed, Rejected, Cancelled.</p>
+        </div>
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-2);">Queue / Token Management</h3>
+          <p>One global queue managed by the owner and staff: Call Next, Recall, Skip, Cancel, Complete, and Hold when documents are missing. Customers do not book tokens online.</p>
+        </div>
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-2);">Collections</h3>
+          <p>An owner-side record of the customer, application and service, amount, payment method, date and time, reference or receipt, and notes.</p>
+        </div>
+        <div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: var(--space-2);">Staff / Permissions &amp; Reports</h3>
+          <p>The owner manages staff access. Collections, reports, settings, and staff management are owner-only areas. Reporting covers daily, weekly, and monthly operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <h2>Challenges</h2>
+      <ul>
+        <li>Designing a practical workflow for a physical service center</li>
+        <li>Separating customer-facing service information from internal financial information</li>
+        <li>Managing queue state and application state separately</li>
+        <li>Designing permissions for owner and staff</li>
+        <li>Keeping the system simple enough for daily use</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="case-section" style="border-bottom: none;">
+    <div class="container">
+      <h2>What This Project Demonstrates</h2>
+      <ul>
+        <li>Workflow design</li>
+        <li>Data organization</li>
+        <li>Role-based access thinking</li>
+        <li>Operational software design</li>
+        <li>Translating a real-world process into a digital system</li>
+        <li>Building around an actual user's needs</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="next-project">
+    <div class="container">
+      <p>Next project</p>
+      <a href="bikergram.html">Bikergram Website →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 Rahul Vamasamudram. All rights reserved.</p>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
